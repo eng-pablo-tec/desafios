@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini IDE com Desafios por Nível</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="tema-azul">
+  <header>
+    <h1>Mini IDE de Desafios JavaScript</h1>
+    <button id="botaoTema" onclick="alternarTema()">🌸 Tema Rosa</button>
+  </header>
+
+  <div class="nivel">
+    <label for="nivelSelect">Escolha o nível:</label>
+    <select id="nivelSelect" onchange="trocarNivel()">
+      <option value="iniciante">Iniciante</option>
+      <option value="intermediario">Intermediário</option>
+      <option value="avancado">Avançado</option>
+    </select>
+  </div>
+
+  <div class="container">
+    <!-- Desafios -->
+    <div class="panel" id="desafios">
+      <h2>Desafio</h2>
+      <p id="personagem">Selecione um nível e clique em "Novo desafio".</p>
+      <button onclick="novoDesafio()">Novo desafio</button>
+    </div>
+
+    <!-- Editor -->
+    <div class="panel" id="ide">
+      <h2>Editor JavaScript</h2>
+      <textarea id="code" placeholder="Escreva seu código JS aqui..."></textarea>
+      <button onclick="executarCodigo()">Executar</button>
+    </div>
+
+    <!-- Console -->
+    <div class="panel" id="console">
+      <h2>Console</h2>
+      <div id="console-output"></div>
+    </div>
+
+    <!-- Dicas -->
+    <div class="panel" id="dicas">
+      <h2>Dicas</h2>
+      <div id="dica-texto">Nenhuma dica ainda...</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
